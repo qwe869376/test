@@ -1,0 +1,294 @@
+[33mcommit 6ccbf1e8f0f403dc04e80f045dfa7a790e708947[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: linx <LinX9581@gmail.com>
+Date:   Thu Sep 6 00:22:36 2018 +0800
+
+    test
+
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3c3629e[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mnode_modules[m
+[1mdiff --git a/.travis.yml b/.travis.yml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..18f48b1[m
+[1m--- /dev/null[m
+[1m+++ b/.travis.yml[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32msudo:          false[m
+[32m+[m[32mlanguage:      node_js[m
+[32m+[m[32mnode_js:[m
+[32m+[m[32m  - "node"[m
+[32m+[m[32minstall:       npm install[m
+[32m+[m[32mscript:[m
+[32m+[m[32m  - npm test[m
+[32m+[m[32m  - gulp[m
+[32m+[m[32mcache:[m
+[32m+[m[32m  directories:[m
+[32m+[m[32m    - node_modules[m
+[1mdiff --git a/LICENSE b/LICENSE[m
+[1mnew file mode 100644[m
+[1mindex 0000000..77afa5b[m
+[1m--- /dev/null[m
+[1m+++ b/LICENSE[m
+[36m@@ -0,0 +1,21 @@[m
+[32m+[m[32mThe MIT License (MIT)[m
+[32m+[m
+[32m+[m[32mCopyright (c) 2013-2018 Blackrock Digital LLC[m
+[32m+[m
+[32m+[m[32mPermission is hereby granted, free of charge, to any person obtaining a copy[m
+[32m+[m[32mof this software and associated documentation files (the "Software"), to deal[m
+[32m+[m[32min the Software without restriction, including without limitation the rights[m
+[32m+[m[32mto use, copy, modify, merge, publish, distribute, sublicense, and/or sell[m
+[32m+[m[32mcopies of the Software, and to permit persons to whom the Software is[m
+[32m+[m[32mfurnished to do so, subject to the following conditions:[m
+[32m+[m
+[32m+[m[32mThe above copyright notice and this permission notice shall be included in[m
+[32m+[m[32mall copies or substantial portions of the Software.[m
+[32m+[m
+[32m+[m[32mTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR[m
+[32m+[m[32mIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,[m
+[32m+[m[32mFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE[m
+[32m+[m[32mAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER[m
+[32m+[m[32mLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,[m
+[32m+[m[32mOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN[m
+[32m+[m[32mTHE SOFTWARE.[m
+[1mdiff --git a/README.md b/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..837ac08[m
+[1m--- /dev/null[m
+[1m+++ b/README.md[m
+[36m@@ -0,0 +1,74 @@[m
+[32m+[m[32m# [Start Bootstrap - Clean Blog](https://startbootstrap.com/template-overviews/clean-blog/)[m
+[32m+[m
+[32m+[m[32m[Clean Blog](http://startbootstrap.com/template-overviews/clean-blog/) is a stylish, responsive blog theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working PHP contact form.[m
+[32m+[m
+[32m+[m[32m## Preview[m
+[32m+[m
+[32m+[m[32m[![Clean Blog Preview](https://startbootstrap.com/assets/img/templates/clean-blog.jpg)](https://blackrockdigital.github.io/startbootstrap-clean-blog/)[m
+[32m+[m
+[32m+[m[32m**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-clean-blog/)**[m
+[32m+[m
+[32m+[m[32m## Status[m
+[32m+[m
+[32m+[m[32m[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-clean-blog/master/LICENSE)[m
+[32m+[m[32m[![npm version](https://img.shields.io/npm/v/startbootstrap-clean-blog.svg)](https://www.npmjs.com/package/startbootstrap-clean-blog)[m
+[32m+[m[32m[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-clean-blog.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-clean-blog)[m
+[32m+[m[32m[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-clean-blog/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-clean-blog)[m
+[32m+[m[32m[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-clean-blog/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-clean-blog?type=dev)[m
+[32m+[m
+[32m+[m[32m## Download and Installation[m
+[32m+[m
+[32m+[m[32mTo begin using this template, choose one of the following options to get started:[m
+[32m+[m[32m* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/clean-blog/)[m
+[32m+[m[32m* Install via npm: `npm i startbootstrap-clean-blog`[m
+[32m+[m[32m* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-clean-blog.git`[m
+[32m+[m[32m* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-clean-blog)[m
+[32m+[m
+[32m+[m[32m## Usage[m
+[32m+[m
+[32m+[m[32m### Basic Usage[m
+[32m+[m
+[32m+[m[32mAfter downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.[m
+[32m+[m
+[32m+[m[32m### Advanced Usage[m
+[32m+[m
+[32m+[m[32mAfter installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.[m
+[32m+[m
+[32m+[m[32m#### Gulp Tasks[m
+[32m+[m
+[32m+[m[32m- `gulp` the default task that builds everything[m
+[32m+[m[32m- `gulp dev` browserSync opens the project in your default browser and live reloads when changes are made[m
+[32m+[m[32m- `gulp css` compiles SCSS files into CSS and minifies the compiled CSS[m
+[32m+[m[32m- `gulp js` minifies the themes JS file[m
+[32m+[m[32m- `gulp vendor` copies dependencies from node_modules to the vendor directory[m
+[32m+[m
+[32m+[m[32mYou must have npm and Gulp installed globally on your machine in order to use these features.[m
+[32m+[m
+[32m+[m[32m## Troubleshooting and Help[m
+[32m+[m
+[32m+[m[32mStart Bootstrap has a public Slack channel which is a great place to ask questions about this template and all things related to Start Bootstrap.[m
+[32m+[m
+[32m+[m[32m**[Click here to join the Slack channel!](https://startbootstrap-slack.herokuapp.com/)**[m
+[32m+[m
+[32m+[m[32m## Bugs and Issues[m
+[32m+[m
+[32m+[m[32mHave a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-clean-blog/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/clean-blog/).[m
+[32m+[m
+[32m+[m[32m## About[m
+[32m+[m
+[32m+[m[32mStart Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.[m
+[32m+[m
+[32m+[m[32m* https://startbootstrap.com[m
+[32m+[m[32m* https://twitter.com/SBootstrap[m
+[32m+[m
+[32m+[m[32mStart Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).[m
+[32m+[m
+[32m+[m[32m* http://davidmiller.io[m
+[32m+[m[32m* https://twitter.com/davidmillerskt[m
+[32m+[m[32m* https://github.com/davidtmiller[m
+[32m+[m
+[32m+[m[32mStart Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).[m
+[32m+[m
+[32m+[m[32m## Copyright and License[m
+[32m+[m
+[32m+[m[32mCopyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/gh-pages/LICENSE) license.[m
+[1mdiff --git a/about.html b/about.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..32f68fb[m
+[1m--- /dev/null[m
+[1m+++ b/about.html[m
+[36m@@ -0,0 +1,129 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m
+[32m+[m[32m  <head>[m
+[32m+[m
+[32m+[m[32m    <meta charset="utf-8">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">[m
+[32m+[m[32m    <meta name="description" content="">[m
+[32m+[m[32m    <meta name="author" content="">[m
+[32m+[m
+[32m+[m[32m    <title>Clean Blog - Start Bootstrap Theme</title>[m
+[32m+[m
+[32m+[m[32m    <!-- Bootstrap core CSS -->[m
+[32m+[m[32m    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">[m
+[32m+[m
+[32m+[m[32m    <!-- Custom fonts for this template -->[m
+[32m+[m[32m    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">[m
+[32m+[m[32m    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>[m
+[32m+[m[32m    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>[m
+[32m+[m
+[32m+[m[32m    <!-- Custom styles for this template -->[m
+[32m+[m[32m    <link href="css/clean-blog.min.css" rel="stylesheet">[m
+[32m+[m
+[32m+[m[32m  </head>[m
+[32m+[m
+[32m+[m[32m  <body>[m
+[32m+[m
+[32m+[m[32m    <!-- Navigation -->[m
+[32m+[m[32m    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">[m
+[32m+[m[32m      <div class="container">[m
+[32m+[m[32m        <a class="navbar-brand" href="index.html">Start Bootstrap</a>[m
+[32m+[m[32m        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">[m
+[32m+[m[32m          Menu[m
+[32m+[m[32m          <i class="fa fa-bars"></i>[m
+[32m+[m[32m        </button>[m
+[32m+[m[32m        <div class="collapse navbar-collapse" id="navbarResponsive">[m
+[32m+[m[32m          <ul class="navbar-nav ml-auto">[m
+[32m+[m[32m            <li class="nav-item">[m
+[32m+[m[32m              <a class="nav-link" href="index.html">Home</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li class="nav-item">[m
+[32m+[m[32m              <a class="nav-link" href="about.html">About</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li class="nav-item">[m
+[32m+[m[32m              <a class="nav-link" href="post.html">Sample Post</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m            <li class="nav-item">[m
+[32m+[m[32m              <a class="nav-link" href="contact.html">Contact</a>[m
+[32m+[m[32m            </li>[m
+[32m+[m[32m          </ul>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m      </div>[m
+[32m+[m[32m    </nav>[m
+[32m+[m
+[32m+[m[32m    <!-- Page Header -->[m
+[32m+[m[32m    <header class="masthead" style="background-image: url('img/about-bg.jpg')">[m
+[32m+[m[32m      <div class="overlay"></div>[m
+[32m+[m[32m      <div class="container">[m
+[32m+[m[32m        <div class="row">[m
+[32m+[m[32m          <div class="col-lg-8 col-md-10 mx-auto">[m
+[32m+[m[32m            <div class="page-heading">[m
+[32m+[m[32m              <h1>About Me</h1>[m
+[32m+[m[32m              <span class="subheading">This is what I do.</span>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m          </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m      </div>[m
+[32m+[m[32m    </header>[m
+[32m+[m
+[32m+[m[32m    <!-- Main Content -->[m
+[32m+[m[32m    <div class="container">[m
+[32m+[m[32m      <div class="row">[m
+[32m+[m[32m        <div class="col-lg-8 col-md-10 mx-auto">[m
+[32m+[m[32m          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>[m
+[32m+[m[32m          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>[m
+[32m+[m[32m          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m      </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <hr>[m
+[32m+[m
+[32m+[m[32m    <!-- Footer -->[m
+[32m+[m[32m    <footer>[m
+[32m+[m[32m      <div class="container">[m
+[32m+[m[32m        <div class="row">[m
+[32m+[m[32m          <div class="col-lg-8 col-md-10 mx-auto">[m
+[32m+[m[32m            <ul class="list-inline text-center">[m
+[32m+[m[32m              <li class="list-inline-item">[m
+[32m+[m[32m                <a href="#">[m
+[32m+[m[32m                  <span class="fa-stack fa-lg">[m
+[32m+[m[32m                    <i class="fa fa-circle fa-stack-2x"></i>[m
+[32m+[m[32m                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>[m
+[32m+[m[32m                  </span>[m
+[32m+[m[32m                </a>[m
+[32m+[m[32m              </li>[m
+[32m+[m[32m              <li class="list-inline-item">[m
+[32m+[m[32m                <a href="#">[m
+[32m+[m[32m                  <span class="fa-stack fa-lg">[m
+[32m+[m[32m                    <i class="fa fa-circle fa-stack-2x"></i>[m
+[32m+[m[32m                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>[m
+[32m+[m[32m                  </span>[m
+[32m+[m[32m                </a>[m
+[32m+[m[32m              </li>[m
+[32m+[m[32m              <li class="list-inline-item">[m
+[32m+[m[32m                <a href="#">[m
+[32m+[m[32m                  <span class="fa-stack fa-lg">[m
+[32m+[m[32m                    <i class="fa fa-circle fa-stack-2x"></i>[m
+[32m+[m[32m                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>[m
+[32m+[m[32m                  </span>[m
+[32m+[m[32m                </a>[m
+[32m+[m[32m              </li>[m
+[32m+[m[32m            </ul>[m
+[32m+[m[32m            <p class="copyright text-muted">Copyright &copy; Your Website 2018</p>[m
+[32m+[m[32m          </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m      </div>[m
+[32m+[m[32m    </footer>[m
+[32m+[m
+[32m+[m[32m    <!-- Bootstrap core JavaScript -->[m
+[32m+[m[32m    <script src="vendor/jquery/jquery.min.js"></script>[m
+[32m+[m[32m    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>[m
+[32m+[m
+[32m+[m[32m    <!-- Custom scripts for this template -->[m
+[32m+[m[32m    <script src="js/clean-blog.min.js"></script>[m
+[32m+[m
+[32m+[m[32m  </body>[m
+[32m+[m
+[32m+[m[32m</html>[m
+[1mdiff --git a/contact.html b/contact.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d1680a9[m
+[1m--- /dev/null[m
+[1m+++ b/contact.html[m
+[36m@@ -0,0 +1,169 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m
+[32m+[m[32m  <head>[m
+[32m+[m
+[32m+[m[32m    <meta charset="utf-8">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">[m
+[32m+[m[32m    <meta name="description" content="">[m
+[32m+[m[32m    <meta name="author" content="">[m
+[32m+[m
+[32m+[m[32m    <title>Clean Blog - Start Bootstrap Theme</title>[m
+[32m+[m
+[32m+[m[32m    <!-- Bootstrap core CSS -->[m
+[32m+[m[32m    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">[m
+[32m+[m
+[32m+[m[32m    
